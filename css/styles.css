@@ -1,0 +1,188 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+		url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+		url('../fonts/OpenSans-Regular.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+		url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+		url('../fonts/OpenSans-Italic.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+		url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+		url('../fonts/OpenSans-SemiBold.woff') format('woff');
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'),
+		url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+		url('../fonts/OpenSans-Bold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+[class*="ground-pane"] {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #333;
+  background: #fff;
+  word-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
+picture img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 0 15px;
+  max-width: 1630px;
+}
+
+.container-reversible {
+  margin: 0 auto;
+  max-width: 1920px;
+  color: var(--custom-text-white);
+  background-repeat: no-repeat;
+  background-color: var(--custom-text-lightdark);
+}
+
+:root {
+  --custom-text-white: #fff;
+  --custom-text-lightdark: #999;
+  --custom-color-focus: #7943A4;
+  --custom-color-hover: #C283F3;
+  --custom-color-active: #9D5CD0;
+}
+
+.nav__item-btn, .search-form__input, .burger, .search-button, .search-form__button, .search-form__button-close, .btn, .catalog__tab, .chronology__item, .chronology__tab, .custom-checkbox, .price-form__input, .editions__btn, .projects__tooltip svg.i-link, .projects__partners-item, .form__input, .contacts__social-item {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #000;
+}
+
+.btn {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 15.5px 34px;
+  border: 2px solid var(--custom-color-active);
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  top: -8px;
+  right: -8px;
+  border-radius: 100px;
+  border: 2px solid var(--custom-color-hover);
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn:focus::before {
+  opacity: 1;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  border: 2px solid #D1A9F0;
+}
+
+.btn:active {
+  border: 2px solid #D1A9F0;
+  background-color: var(--custom-color-focus);
+}
+
+.section-heading {
+  margin-bottom: 16px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+}
+
+.section-description {
+  max-width: 1080px;
+}
+
+.block-heading {
+  font-weight: 600;
+  font-size: 24px;
+}
