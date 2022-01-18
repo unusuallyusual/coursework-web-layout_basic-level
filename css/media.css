@@ -1280,6 +1280,25 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
   }
+  
+  .checkbox__heading.js-check-heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    -webkit-transform: translateY(calc(-50% - 0.5px)) rotate(45deg);
+    -ms-transform: translateY(calc(-50% - 0.5px)) rotate(45deg);
+    transform: translateY(calc(-50% - 0.5px)) rotate(45deg);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
 
   .checkbox__heading.js-check-heading.active::after {
     -webkit-transform: translateY(-50%) rotate(225deg);
